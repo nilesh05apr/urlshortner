@@ -1,6 +1,6 @@
 REST API for shortening urls  
--created custom hashing function to generate unique strings   
--hash generatioin based on numbers, lower case and upper case alphabets  
+- Created custom hashing function to generate unique strings   
+- Hash generatioin based on previous hash counter  
 
 Tech Stack: Django  
 
