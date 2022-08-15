@@ -4,5 +4,5 @@ from .views import index, reroute, upload
 
 urlpatterns = [
     path('', upload, name='upload'),
-    path('url.ly/<str:pk>',reroute,name='reroute')
+    path('<str:pk>',reroute,name='reroute')
 ]

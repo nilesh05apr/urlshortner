@@ -18,7 +18,7 @@ def generateHash(counter):
 
 
 def hash(long_url_counter):
-    short_url = 'url.ly/'
+    short_url = ''
     hash_value = generateHash(long_url_counter)
     hash_value = hash_value[0:7]
     short_url += hash_value
