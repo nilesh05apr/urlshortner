@@ -1,8 +1,9 @@
 from django.http import HttpResponse,JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from urlapp.forms import URLForm
 from urlapp.util import checkHash
+from .models import URLS
 
 # Create your views here.
 
@@ -23,3 +24,9 @@ def upload(request):
     else:
         form = URLForm()
     return render(request,"urlapp/form.html",{"form":form})
+
+
+def reroute(request,pk):
+    url_data = URLS.objects.get(id=pk)
+    return redirect(url_data.long_url)
+    
