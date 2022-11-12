@@ -1,8 +1,9 @@
 from django.contrib import admin
 from django.urls import path
-from .views import index, reroute, upload
+from .views import reroute,api,health
 
 urlpatterns = [
-    path('', upload, name='upload'),
+    path('health/',health),
+    path('', api, name='api'),
     path('<str:pk>',reroute,name='reroute')
 ]
