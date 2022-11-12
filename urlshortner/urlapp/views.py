@@ -20,7 +20,8 @@ def upload(request):
             print(short_url)
             print(long_url)
             # return HttpResponse(short_url)
-            return JsonResponse({"long_url":long_url,"short_url":short_url})
+            surl = 'https://surl.herokuapp.com/api'+short_url
+            return JsonResponse({"long_url":long_url,"short_url":surl})
     else:
         form = URLForm()
     return render(request,"urlapp/form.html",{"form":form})
