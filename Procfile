@@ -1,1 +1,1 @@
-web: gunicorn urlshortner.urlshortner.wsgi.application --log-file - 
+web: python3 manage.py migrate && gunicorn urlshortner.wsgi --log-file - 
