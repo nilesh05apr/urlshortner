@@ -17,7 +17,7 @@ def api(request):
     if request.method == 'POST':
         long_url = request.data['long_url']
         short_url = checkHash(long_url=long_url)
-        surl = 'https://surl.herokuapp.com/api'+short_url
+        surl = 'https://web-production-c1d8.up.railway.app/api/'+short_url
         return JsonResponse({"long_url":long_url,"short_url":surl})
     else:
         return JsonResponse({"error":"Invalid Request"})
